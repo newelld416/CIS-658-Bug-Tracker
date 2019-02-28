@@ -11,4 +11,5 @@ class Bug < ApplicationRecord
     enum status_options: %i[Open Closed Monitor]
     validates :status, inclusion: { in: status_options }
 
+    belongs_to :user
 end

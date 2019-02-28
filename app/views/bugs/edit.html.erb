@@ -1,6 +1,7 @@
 
 <h1>Edit bug</h1>
  
-<%= render 'form' %>
+<%= render 'form', bug: @bug %>
  
+<%= link_to 'Show', @bug %> |
 <%= link_to 'Back', bugs_path %>
