@@ -1,24 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fname:</strong>
-  <%= @user.fname %>
-</p>
+<h1>User</h1>
+<form>
+  <div class="form-group">
+    <label for="fname">First Name</label>
+    <input type="text" class="form-control" id="fname" placeholder="<%= @user.lname %>" disabled>
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name</label>
+    <input type="text" class="form-control" id="lname" placeholder="<%= @user.fname %>" disabled>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="<%= @user.email %>" disabled>
+  </div>
+  <div class="form-group">
+    <label for="thumbnail">Email</label>
+    <input type="text" class="form-control" id="thumbnail" placeholder="<%= @user.thumbnail %>" disabled>
+  </div>
+</form>
 
-<p>
-  <strong>Lname:</strong>
-  <%= @user.lname %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Thumbnail:</strong>
-  <%= @user.thumbnail %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div>
+  <%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-primary" %>
+  <%= link_to 'Back', users_path, :class => "btn"%>
+</div
