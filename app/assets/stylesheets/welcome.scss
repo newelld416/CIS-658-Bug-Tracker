@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .jumbotron {
-    background-image: asset-url('gvsu.jpeg');
     background-size: contain;
-    height: 400px;
+    background-color: lightgray;
+    height: 300px;
 }
 .jumbotron h1 {
    color: #fff;
