@@ -2,8 +2,8 @@
 (function () {
     "use strict";
   
-    var insertUsers = function(users) {
-      var list = document.getElementById("userList");
+    var insertUsersXLS = function(users) {
+      var list = document.getElementById("userListXSL");
 
       console.log(users.getElementById("rootOfList"));
       // Copy HTML returned by XSLT directly into DOM.
@@ -11,7 +11,7 @@
     };
   
   
-    var loadUsers = function () {
+    var loadUsersXLS = function () {
       var ajax = new XMLHttpRequest();
       console.log("Click!");
   
@@ -23,7 +23,7 @@
         if (ajax.readyState === 4 && ajax.status === 200) {
           console.log("Complete AJAX object:");
           console.log(ajax);
-          insertUsers(ajax.responseXML);
+          insertUsersXLS(ajax.responseXML);
         } else if (ajax.readyState === 4 && ajax.status !== 200) {
             console.log(ajax);
           console.log("There was a problem.  Status returned was " + ajax.status);
@@ -44,8 +44,8 @@
     document.addEventListener("readystatechange", function () {
       console.log("Ready:  " + document.readyState);
       if (document.readyState === "interactive") {
-        var loadButton = document.getElementById("loadButton");
-        loadButton.addEventListener("click", loadUsers);
+        var loadButton = document.getElementById("loadButtonXLS");
+        loadButton.addEventListener("click", loadUsersXLS);
       }
     });
   })();

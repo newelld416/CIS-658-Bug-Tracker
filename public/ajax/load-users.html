@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
     <script src="loadUsersJSON.js"></script>
-    <!-- 
-        <script src="loadUsersJSON.js"></script>
-        <script src="loadUsersXML.js"></script> 
-    -->
+    <script src="loadUsersXLS.js"></script>
+    <script src="loadUsersXML.js"></script>
 </head>
-<body>
 
-<h1>Users</h1>
-<ul id="userList">
-    <li class="noneMarker"><em>none yet</em></li>
-</ul>
-<button id="loadButton">Load</button>
+<body>
+    <div>
+        <h1>XML Users</h1>
+        <ul id="userListXML">
+            <li class="noneMarker"><em>none yet</em></li>
+        </ul>
+        <button id="loadButtonXML">Load</button>
+    </div>
+    <div>
+        <h1>XLS Users</h1>
+        <ul id="userListXLS">
+            <li class="noneMarker"><em>none yet</em></li>
+        </ul>
+        <button id="loadButtonXLS">Load</button>
+    </div>
+    <div>
+        <h1>JSON Users</h1>
+        <ul id="userListJSON">
+            <li class="noneMarker"><em>none yet</em></li>
+        </ul>
+        <button id="loadButtonJSON">Load</button>
+    </div>
 </body>
+
 </html>

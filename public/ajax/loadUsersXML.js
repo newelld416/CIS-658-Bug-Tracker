@@ -2,8 +2,8 @@
 (function () {
     "use strict";
   
-    var insertUsers = function(users) {
-      var list = document.getElementById("userList");
+    var insertUsersXML = function(users) {
+      var list = document.getElementById("userListXML");
       list.getElementsByClassName("noneMarker")[0].hidden = true;
       users.forEach(function(user){
         var newLI = document.createElement("li");
@@ -32,7 +32,7 @@
       return users;
     };
   
-    var loadUsers = function () {
+    var loadUsersXML = function () {
       var ajax = new XMLHttpRequest();
       console.log("Click!");
   
@@ -45,7 +45,7 @@
           console.log("Complete AJAX object:");
           console.log(ajax);
           var users = xmlToUsers(ajax.responseXML);
-          insertUsers(users);
+          insertUsersXML(users);
         } else if (ajax.readyState === 4 && ajax.status !== 200) {
           console.log("There was a problem.  Status returned was " + ajax.status);
         }
@@ -65,8 +65,8 @@
     document.addEventListener("readystatechange", function () {
       console.log("Ready:  " + document.readyState);
       if (document.readyState === "interactive") {
-        var loadButton = document.getElementById("loadButton");
-        loadButton.addEventListener("click", loadUsers);
+        var loadButton = document.getElementById("loadButtonXML");
+        loadButton.addEventListener("click", loadUsersXML);
       }
     });
   })();

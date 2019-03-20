@@ -2,9 +2,9 @@
 (function () {
     "use strict";
   
-    var insertAuthors = function(users) {
+    var insertUsersJSON = function(users) {
   
-      var list = document.getElementById("userList");
+      var list = document.getElementById("userListJSON");
       list.getElementsByClassName("noneMarker")[0].hidden = true;
       users.forEach(function(user){
         var newLI = document.createElement("li");
@@ -14,7 +14,7 @@
       });
     };
   
-    var loadUsers = function () {
+    var loadUsersJSON = function () {
       var ajax = new XMLHttpRequest();
       console.log("Click!");
   
@@ -29,7 +29,7 @@
           var users = JSON.parse(ajax.responseText);
           console.log("Parsed JSON");
           console.log(users);
-          insertAuthors(users);
+          insertUsersJSON(users);
         } else if (ajax.readyState === 4 && ajax.status !== 200) {
           console.log("There was a problem.  Status returned was " + ajax.status);
         }
@@ -49,8 +49,8 @@
     document.addEventListener("readystatechange", function () {
       console.log("Ready:  " + document.readyState);
       if (document.readyState === "interactive") {
-        var loadButton = document.getElementById("loadButton");
-        loadButton.addEventListener("click", loadUsers);
+        var loadButton = document.getElementById("loadButtonJSON");
+        loadButton.addEventListener("click", loadUsersJSON);
       }
     });
   })();
