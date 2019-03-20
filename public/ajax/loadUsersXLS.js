@@ -17,7 +17,7 @@
   
       // Replace URL below with the URL for your server.
       //ajax.open("GET", 'http://localhost:3000/users.xml');
-      ajax.open("GET", 'https://cis-658-bug-tracker-v2.herokuapp.com/users.XML');
+      ajax.open("GET", 'https://cis-658-bug-tracker-v2.herokuapp.com/users.xml');
       ajax.onreadystatechange = function () {
         console.log("Ajax state: " + ajax.readyState);
         if (ajax.readyState === 4 && ajax.status === 200) {
